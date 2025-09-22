@@ -1,0 +1,19 @@
+# Ignorar carpetas de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar archivos temporales
+*.log
+*.tmp
+*.swp
+
+# Ignorar entornos virtuales
+venv/
+.env/
+.venv/
+
+# Ignorar configuraciones locales
+*.DS_Store
+.idea/
+.vscode/
