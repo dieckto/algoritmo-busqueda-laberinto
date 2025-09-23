@@ -104,8 +104,8 @@ def amplitud_casilla_por_casilla():
         if actual == fin:
             return
 
-        # Explorar vecinos
-        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]: # Sin diagonales para laberinto
+        # Explorar vecinos (solo movimientos ortogonales)
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
             nx, ny = actual[0]+dx, actual[1]+dy
             vecino = (nx, ny)
             if (0<=nx<LAB_SIZE and 0<=ny<LAB_SIZE and 
@@ -126,8 +126,8 @@ def profundidad_casilla_por_casilla():
         if actual == fin:
             return
 
-        # Explorar vecinos
-        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]: # Sin diagonales para laberinto
+        # Explorar vecinos (solo movimientos ortogonales)
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
             nx, ny = actual[0]+dx, actual[1]+dy
             vecino = (nx, ny)
             if (0<=nx<LAB_SIZE and 0<=ny<LAB_SIZE and 
@@ -230,3 +230,4 @@ def repetir(algoritmo):
 dibujar_tablero(canvas_laberinto, laberinto, inicio, fin)
 dibujar_tablero(canvas_visitados, [[0]*LAB_SIZE for _ in range(LAB_SIZE)], inicio, fin)
 root.mainloop()
+
